@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roots to Farm - Fresh From The Farm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Roots to Farm</h2>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile" id="navMobile">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Fresh From The Farm, Straight To Your Doorstep</h1>
+                <p>Experience the finest organic produce and farm-fresh products delivered with care and quality you can trust</p>
+                <a href="#products" class="cta-button">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Farm Fresh Products</h2>
+            <div class="products-grid">
+                <div class="product-card" data-name="Organic Apples" data-price="199">
+                    <img src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Organic Apples">
+                    <div class="product-info">
+                        <h3>Organic Apples</h3>
+                        <p class="product-description">Crisp, sweet organic apples picked fresh from our orchards</p>
+                        <div class="product-price">199/-</div>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="Fresh Carrots" data-price="249">
+                    <img src="https://images.pexels.com/photos/143133/pexels-photo-143133.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fresh Carrots">
+                    <div class="product-info">
+                        <h3>Fresh Carrots</h3>
+                        <p class="product-description">Garden-fresh carrots, perfect for cooking or snacking</p>
+                        <div class="product-price">249/-</div>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="Farm Fresh Milk" data-price="70/-">
+                    <img src="https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Farm Fresh Milk">
+                    <div class="product-info">
+                        <h3>Farm Fresh Milk</h3>
+                        <p class="product-description">Pure, creamy milk from grass-fed cows on our local farm</p>
+                        <div class="product-price">70/-ltr</div>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="Organic Brown Rice" data-price="159">
+                    <img src="https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Organic Brown Rice">
+                    <div class="product-info">
+                        <h3>Organic Brown Rice</h3>
+                        <p class="product-description">Nutritious whole grain brown rice, organically grown</p>
+                        <div class="product-price">159/-bag</div>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="Fresh Tomatoes" data-price="55">
+                    <img src="https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fresh Tomatoes">
+                    <div class="product-info">
+                        <h3>Fresh Tomatoes</h3>
+                        <p class="product-description">Vine-ripened tomatoes bursting with flavor and nutrients</p>
+                        <div class="product-price">$55/kg</div>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-name="Organic Spinach" data-price="25">
+                    <img src="https://images.pexels.com/photos/2255935/pexels-photo-2255935.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Organic Spinach">
+                    <div class="product-info">
+                        <h3>Organic Spinach</h3>
+                        <p class="product-description">Fresh, leafy spinach packed with vitamins and minerals</p>
+                        <div class="product-price">$25/bunch</div>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section (Hidden by default) -->
+    <section class="payment-section" id="paymentSection">
+        <div class="container">
+            <div class="payment-form-wrapper">
+                <button class="close-payment" id="closePayment">&times;</button>
+                <h2>Complete Your Purchase</h2>
+                <div class="selected-product">
+                    <h3 id="selectedProductName">Product Name</h3>
+                    <div class="selected-price" id="selectedProductPrice">$0</div>
+                </div>
+                
+                <form class="payment-form" id="paymentForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Delivery Address</label>
+                        <textarea id="address" name="address" rows="3" placeholder="Enter your full delivery address" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="payment-submit">Complete Purchase</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Roots to Farm</h3>
+                    <p>Bringing you the freshest produce straight from local farms to your table with love and care.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: hello@rootstofarm.com</p>
+                    <p>Phone: (555) 123-FARM</p>
+                    <p>Fresh delivery daily!</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Roots to Farm Fresh Market. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
